@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Core.Infrastructure", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Integration", "Knab.Integration\Knab.Integration.csproj", "{A3F71102-50F3-4DEF-9748-1FF148839666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application", "Knab.Application\Knab.Application.csproj", "{18FB92C8-8C60-4644-9F85-8D09702E1561}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application.CoinMarketCap", "Knab.Application.CoinMarketCap\Knab.Application.CoinMarketCap.csproj", "{C82F734B-25A8-4966-B626-3F0B8F0A4E46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{A3F71102-50F3-4DEF-9748-1FF148839666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3F71102-50F3-4DEF-9748-1FF148839666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3F71102-50F3-4DEF-9748-1FF148839666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18FB92C8-8C60-4644-9F85-8D09702E1561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18FB92C8-8C60-4644-9F85-8D09702E1561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18FB92C8-8C60-4644-9F85-8D09702E1561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18FB92C8-8C60-4644-9F85-8D09702E1561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82F734B-25A8-4966-B626-3F0B8F0A4E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82F734B-25A8-4966-B626-3F0B8F0A4E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82F734B-25A8-4966-B626-3F0B8F0A4E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82F734B-25A8-4966-B626-3F0B8F0A4E46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
