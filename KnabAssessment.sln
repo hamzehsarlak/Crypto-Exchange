@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Core", "Knab.Core\Knab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Core.Infrastructure", "Knab.Core.Infrastructure\Knab.Core.Infrastructure.csproj", "{BEAE87EA-8542-41B6-A0F1-EA2BA3C7C28D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Integration", "Knab.Integration\Knab.Integration.csproj", "{A3F71102-50F3-4DEF-9748-1FF148839666}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BEAE87EA-8542-41B6-A0F1-EA2BA3C7C28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEAE87EA-8542-41B6-A0F1-EA2BA3C7C28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEAE87EA-8542-41B6-A0F1-EA2BA3C7C28D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3F71102-50F3-4DEF-9748-1FF148839666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F71102-50F3-4DEF-9748-1FF148839666}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F71102-50F3-4DEF-9748-1FF148839666}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F71102-50F3-4DEF-9748-1FF148839666}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
