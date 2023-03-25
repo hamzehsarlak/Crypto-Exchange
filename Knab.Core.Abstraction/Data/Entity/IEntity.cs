@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Knab.Core.Abstraction.Entity
+namespace Knab.Core.Abstraction.Data.Entity
 {
     /// <summary>
     /// Entity must have a id
