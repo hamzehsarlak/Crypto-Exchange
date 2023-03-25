@@ -11,9 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Core.Infrastructure", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Integration", "Knab.Integration\Knab.Integration.csproj", "{A3F71102-50F3-4DEF-9748-1FF148839666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application", "Knab.Application\Knab.Application.csproj", "{18FB92C8-8C60-4644-9F85-8D09702E1561}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application", "Knab.Application\Knab.Application.csproj", "{DC3AD237-69CA-426E-AE8F-BD3AA3F36C8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application.CoinMarketCap", "Knab.Application.CoinMarketCap\Knab.Application.CoinMarketCap.csproj", "{C82F734B-25A8-4966-B626-3F0B8F0A4E46}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application.CoinMarketCap", "Knab.Application.CoinMarketCap\Knab.Application.CoinMarketCap.csproj", "{1BE4C4CB-B7D6-40A1-8AC3-4BDB7724BBF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Data.InMemory", "Knab.Data.InMemory\Knab.Data.InMemory.csproj", "{5BC2D943-909D-4F52-85CE-63375E3ABBD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application.ExchangeRatesApi", "Knab.Application.ExchangeRatesApi\Knab.Application.ExchangeRatesApi.csproj", "{76EF4BE9-F232-40D7-BEC6-27B1785AC26D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,22 @@ Global
 		{C82F734B-25A8-4966-B626-3F0B8F0A4E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C82F734B-25A8-4966-B626-3F0B8F0A4E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C82F734B-25A8-4966-B626-3F0B8F0A4E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BC2D943-909D-4F52-85CE-63375E3ABBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BC2D943-909D-4F52-85CE-63375E3ABBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BC2D943-909D-4F52-85CE-63375E3ABBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BC2D943-909D-4F52-85CE-63375E3ABBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76EF4BE9-F232-40D7-BEC6-27B1785AC26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76EF4BE9-F232-40D7-BEC6-27B1785AC26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76EF4BE9-F232-40D7-BEC6-27B1785AC26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76EF4BE9-F232-40D7-BEC6-27B1785AC26D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC3AD237-69CA-426E-AE8F-BD3AA3F36C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC3AD237-69CA-426E-AE8F-BD3AA3F36C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC3AD237-69CA-426E-AE8F-BD3AA3F36C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC3AD237-69CA-426E-AE8F-BD3AA3F36C8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BE4C4CB-B7D6-40A1-8AC3-4BDB7724BBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BE4C4CB-B7D6-40A1-8AC3-4BDB7724BBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BE4C4CB-B7D6-40A1-8AC3-4BDB7724BBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BE4C4CB-B7D6-40A1-8AC3-4BDB7724BBF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
