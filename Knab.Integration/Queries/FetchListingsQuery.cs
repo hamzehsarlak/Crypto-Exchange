@@ -6,7 +6,13 @@ namespace Knab.Integration.Queries
 {
     public class FetchListingsQuery : MediatRQueryBase<IEnumerable<ListingDto>>
     {
-        public int Offset { get; set; }
-        public int Limit { get; set; }
+        public FetchListingsQuery(int limit = 100, int offset = 1)
+        {
+            Limit = limit;
+            Offset = offset;
+        }
+
+        public int Offset { get; }
+        public int Limit { get; }
     }
 }

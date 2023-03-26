@@ -7,7 +7,6 @@ namespace Knab.Core.Abstraction.Data.Entity
     /// </summary>
     public interface IEntityId
     {
-        object Id { get; }
     }
     /// <summary>
     /// Custom entity type id
@@ -15,7 +14,7 @@ namespace Knab.Core.Abstraction.Data.Entity
     /// <typeparam name="T"></typeparam>
     public interface IEntityId<out T> : IEntityId
     {
-        new T Id { get; }
+        T Id { get; }
     }
     /// <summary>
     /// Guid entity id
