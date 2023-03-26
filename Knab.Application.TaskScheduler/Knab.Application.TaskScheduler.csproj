@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Hangfire.Core" Version="1.7.33" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Knab.Core.Abstraction\Knab.Core.Abstraction.csproj" />
+      <ProjectReference Include="..\Knab.Integration\Knab.Integration.csproj" />
+    </ItemGroup>
+
+</Project>

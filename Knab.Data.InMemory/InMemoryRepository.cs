@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Knab.Core.Abstraction.Data;
@@ -32,12 +33,27 @@ namespace Knab.Data.InMemory
             throw new NotImplementedException();
         }
 
+        public Task<TEntity> Add(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<TEntity> Update(TEntity entity, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> Update(TEntity entity, int expectedVersion, CancellationToken cancellationToken = default)
+        public Task<TEntity> Upsert(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<TEntity> Upsert(TEntity entity, CancellationToken cancellationToken = default)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<TEntity> Update(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -47,7 +63,7 @@ namespace Knab.Data.InMemory
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> Delete(TEntity entity, int expectedVersion, CancellationToken cancellationToken = default)
+        public Task<TEntity> Delete(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }
@@ -57,7 +73,7 @@ namespace Knab.Data.InMemory
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteById(object id, int expectedVersion, CancellationToken cancellationToken = default)
+        public Task<bool> DeleteById(IEnumerable<object> id, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
         }

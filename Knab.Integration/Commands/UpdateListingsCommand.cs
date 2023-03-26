@@ -7,7 +7,7 @@ namespace Knab.Integration.Commands
 {
     public class UpdateListingsCommand : MediatRCommandBase<bool>, IMediatRCommand
     {
-        public IEnumerable<ListingDto> Listings { get; set; }
+        public IEnumerable<ListingDto> Listings { get; }
 
         public UpdateListingsCommand(IEnumerable<ListingDto> listings)
         {

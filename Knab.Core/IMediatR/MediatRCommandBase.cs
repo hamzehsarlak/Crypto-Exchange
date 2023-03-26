@@ -10,9 +10,13 @@ namespace Knab.Core.IMediatR
             Id = Guid.NewGuid();
         }
 
-        protected MediatRCommandBase(Guid id)
+        public Guid Id { get; }
+    }
+    public abstract class MediatRCommandBase : IMediatRCommand
+    {
+        protected MediatRCommandBase()
         {
-            Id = id;
+            Id = Guid.NewGuid();
         }
 
         public Guid Id { get; }
