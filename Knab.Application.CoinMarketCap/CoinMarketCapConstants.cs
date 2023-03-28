@@ -9,11 +9,13 @@ namespace Knab.CoinMarketCap
         public const string UrlListingsLatest = "/v1/cryptocurrency/listings/latest";
         private const string QsStart = "start";
         private const string QsLimit = "limit";
+        private const string QsConvert = "convert";
         private const string HeaderApiKey = "X-CMC_PRO_API_KEY";
         public const string BtcSymbol = "BTC";
         public const string UsdSymbol = "USD";
+        
 
-        public static List<Tuple<string, string>> GetPaginationQueryParams(int offset, int limit) =>
+        public static List<Tuple<string, string>> GetQueryParams(int offset, int limit) =>
             new List<Tuple<string, string>>
             {
                 new Tuple<string, string>(QsStart, offset.ToString()),

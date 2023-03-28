@@ -2,7 +2,7 @@ using Knab.Core.Abstraction.Data.Entity;
 
 namespace Knab.Domain.Entities
 {
-    public class RateEntity : IEntityStringId
+    public class RateEntity : IEntity<string>
     {
         private readonly double _rate;
 

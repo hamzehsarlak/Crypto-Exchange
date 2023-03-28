@@ -1,12 +1,13 @@
 using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Knab.CoinMarketCap.Models.Response
 {
-    public abstract class GenericResponse<T>
+    public class GenericResponse<T>
     {
         [JsonProperty("data")]
-        public T[] Data { get; set; }
+        public List<T> Data { get; set; }
 
         [JsonProperty("status")]
         public ListingsResponseStatus Status { get; set; }

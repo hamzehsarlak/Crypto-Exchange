@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Knab.CoinMarketCap
 {
-    public static class CoinMarketCapCollectionExtensions
+    public static class CoinMarketCapServiceCollectionExtensions
     {
         public static IServiceCollection AddCoinMarketCap(this IServiceCollection services, Action<CoinMarketCapOptions> setupAction)
         {

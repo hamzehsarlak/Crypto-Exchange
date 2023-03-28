@@ -2,7 +2,7 @@ using Knab.Core.Abstraction.Data.Entity;
 
 namespace Knab.Domain.Entities
 {
-    public class ListingEntity : IEntityIntId
+    public class ListingEntity : IEntity<int>
     {
         private readonly double _usdPrice;
         private readonly double _btcPrice;

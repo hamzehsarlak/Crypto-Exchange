@@ -13,6 +13,8 @@ namespace Knab.Core.Abstraction.Data
 
     public interface IRepository<TEntity> : IRepository where TEntity : class, IEntityId
     {
+        Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default);
+        
         Task<TEntity> FindById(object id, CancellationToken cancellationToken = default);
 
         Task<TEntity> Add(TEntity entity, CancellationToken cancellationToken = default);
@@ -21,7 +23,7 @@ namespace Knab.Core.Abstraction.Data
 
         Task<TEntity> Update(TEntity entity, CancellationToken cancellationToken = default);
 
-        Task<TEntity> Upsert(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default);
+        Task<IEnumerable<TEntity>> Upsert(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default);
         
         Task<TEntity> Upsert(TEntity entity, CancellationToken cancellationToken = default);
 

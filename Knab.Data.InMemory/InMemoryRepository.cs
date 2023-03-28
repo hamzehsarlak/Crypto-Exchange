@@ -23,6 +23,12 @@ namespace Knab.Data.InMemory
             return Task.CompletedTask;
         }
 
+        public async Task<IEnumerable<TEntity>> GetAllAsync(CancellationToken cancellationToken = default)
+        {
+            _memoryCache.TryGetValue(typeof(TEntity).FullName, out IEnumerable<TEntity>? entities);
+            return await Task.FromResult(entities ?? new List<TEntity>());
+        }
+
         public Task<TEntity> FindById(object id, CancellationToken cancellationToken = default)
         {
             throw new NotImplementedException();
@@ -43,9 +49,16 @@ namespace Knab.Data.InMemory
             throw new NotImplementedException();
         }
 
-        public Task<TEntity> Upsert(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<TEntity>> Upsert(IEnumerable<TEntity> entities,
+            CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            return await _memoryCache.GetOrCreateAsync(
+                typeof(TEntity).FullName,
+                cacheEntry =>
+                {
+                    cacheEntry.SlidingExpiration = TimeSpan.FromHours(24);
+                    return Task.FromResult(entities);
+                }) ?? new List<TEntity>();
         }
 
         public Task<TEntity> Upsert(TEntity entity, CancellationToken cancellationToken = default)

@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Application.TaskSchedu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Domain", "Knab.Domain\Knab.Domain.csproj", "{3372FD82-F323-4E68-B40B-7B6897B553D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knab.Web", "Knab.Web\Knab.Web.csproj", "{8CB3B3A2-3454-4BB6-B129-4BF6520E13A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{3372FD82-F323-4E68-B40B-7B6897B553D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3372FD82-F323-4E68-B40B-7B6897B553D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3372FD82-F323-4E68-B40B-7B6897B553D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB3B3A2-3454-4BB6-B129-4BF6520E13A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB3B3A2-3454-4BB6-B129-4BF6520E13A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB3B3A2-3454-4BB6-B129-4BF6520E13A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB3B3A2-3454-4BB6-B129-4BF6520E13A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

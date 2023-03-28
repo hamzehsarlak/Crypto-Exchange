@@ -22,7 +22,7 @@ namespace Knab.Application.ExchangeRatesApi
             _options = options.Value;
         }
 
-        public async Task<Dictionary<string, double>> GetListingsAsync(FetchRatesQuery fetchListingsQuery,
+        public async Task<Dictionary<string, double>> GetRatesAsync(FetchRatesQuery fetchListingsQuery,
             CancellationToken cancellationToken = default)
         {
             var request = await _restQueryBus.Get<RatesResponse>(ExchangeRatesApiConstants.BaseUrl,

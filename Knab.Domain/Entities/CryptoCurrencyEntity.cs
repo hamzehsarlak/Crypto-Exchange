@@ -2,7 +2,7 @@ using Knab.Core.Abstraction.Data.Entity;
 
 namespace Knab.Domain.Entities
 {
-    public class CryptoCurrencyEntity : IEntityIntId
+    public class CryptoCurrencyEntity : IEntity<int>
     {
         private readonly string _name;
         private readonly string _symbol;
