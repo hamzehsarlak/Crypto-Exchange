@@ -18,7 +18,7 @@ namespace Knab.Application.QueryHandlers
 
         public async Task<Dictionary<string, double>> Handle(FetchRatesQuery request, CancellationToken cancellationToken)
         {
-            return await _rateService.GetListingsAsync(request, cancellationToken);
+            return await _rateService.GetRatesAsync(request, cancellationToken);
         }
     }
 }

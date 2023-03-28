@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        ChannelEngine Assessment
+    </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fa/css/fa.all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/jquery.toast.min.css">
+
+    <script src="js/signalr.min.js"></script>
+    <script src="js/signalr.js"></script>
+    
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    
+    <script src="js/site.js" asp-append-version="true"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.toast.min.js"></script>  
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table id="dataTable" class="table table-striped" style="width:100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Symbol</th>                        
+                        <th>BTC</th>
+                        <th>USD</th>
+                        <th>EUR</th>
+                        <th>BRL</th>
+                        <th>GBP</th>
+                        <th>AUD</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="toast" tabindex="-1" role="dialog" aria-labelledby="editStockLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editStockModal" tabindex="-1" role="dialog" aria-labelledby="editStockLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editStockLabel">Update stock of ...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="stockInput" class="col-form-label">Enter stock:</label>
+                            <input type="number" class="form-control" id="stockInput">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btnUpdateStockCall">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Knab.Application.CoinMarketCap\Knab.Application.CoinMarketCap.csproj" />
+      <ProjectReference Include="..\Knab.Application.ExchangeRatesApi\Knab.Application.ExchangeRatesApi.csproj" />
+      <ProjectReference Include="..\Knab.Application.TaskScheduler\Knab.Application.TaskScheduler.csproj" />
+      <ProjectReference Include="..\Knab.Core.Abstraction\Knab.Core.Abstraction.csproj" />
+      <ProjectReference Include="..\Knab.Data.InMemory\Knab.Data.InMemory.csproj" />
+      <ProjectReference Include="..\Knab.Integration\Knab.Integration.csproj" />
+    </ItemGroup>
+
+</Project>

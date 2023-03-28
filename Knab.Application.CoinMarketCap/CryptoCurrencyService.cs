@@ -31,7 +31,7 @@ namespace Knab.CoinMarketCap
             var request = await _restQueryBus.Get<ListingsResponse>(CoinMarketCapConstants.BaseUrl,
                 CoinMarketCapConstants.UrlListingsLatest,
                 CoinMarketCapConstants.GetDefaultHeaders(_options.ApiKey),
-                CoinMarketCapConstants.GetPaginationQueryParams(fetchListingsQuery.Offset, fetchListingsQuery.Limit),
+                CoinMarketCapConstants.GetQueryParams(fetchListingsQuery.Offset, fetchListingsQuery.Limit),
                 cancellationToken);
 
             if (request.ErrorException != null) throw request.ErrorException;
@@ -41,8 +41,14 @@ namespace Knab.CoinMarketCap
             return MapListings(request.Result.Data);
         }
 
-        private static IEnumerable<ListingDto> MapListings(IEnumerable<ListingsResponseData> data) =>
-            data.Select(c => new ListingDto
+        private static IEnumerable<ListingDto> MapListings(IEnumerable<ListingsResponseData> data)
+        {
+            var listings = data as ListingsResponseData[] ?? data.ToArray();
+            
+            // free api doesn't allow to convert to two symbols so this is the hack
+            CalculateBtcPrice(listings);
+
+            return listings.Select(c => new ListingDto
             {
                 CryptoCurrencyDto = new CryptoCurrencyDto
                 {
@@ -51,8 +57,29 @@ namespace Knab.CoinMarketCap
                     Slug = c.Slug,
                     Symbol = c.Symbol
                 },
-                BtcPrice = c.Quote[CoinMarketCapConstants.BtcSymbol].Price,
-                UsdPrice = c.Quote[CoinMarketCapConstants.UsdSymbol].Price
+                Id = c.Id,
+                BtcPrice = c.Quote.TryGetValue(CoinMarketCapConstants.BtcSymbol, out var btc) ? btc.Price : 1,
+                UsdPrice = c.Quote.TryGetValue(CoinMarketCapConstants.UsdSymbol, out var usd) ? usd.Price : 1
             });
+        }
+
+        private static void CalculateBtcPrice(ListingsResponseData[] listings)
+        {
+            var btcUsdPrice = PriceValue(listings.FirstOrDefault(d => d.Symbol == CoinMarketCapConstants.BtcSymbol)!,
+                CoinMarketCapConstants.UsdSymbol);
+            foreach (var listing in listings)
+            {
+                var usdPrice = PriceValue(listing, CoinMarketCapConstants.UsdSymbol);
+                listing.Quote.Add(CoinMarketCapConstants.BtcSymbol, new ListingsResponseQuote
+                {
+                    Price = usdPrice / btcUsdPrice
+                });
+            }
+        }
+
+        private static double PriceValue(ListingsResponseData listing, string symbol)
+        {
+            return listing.Quote.TryGetValue(symbol, out var q) ? q.Price : 1;
+        }
     }
 }
