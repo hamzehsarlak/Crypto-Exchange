@@ -15,8 +15,7 @@ namespace Knab.Application.QueryHandlers
     public class GetConversionsQueryHandler : IMediatRQueryHandler<GetConversionsQuery, IEnumerable<ConversionDto>>
     {
         private readonly IQueryBus _queryBus;
-
-
+        
         public GetConversionsQueryHandler(IQueryBus queryBus)
         {
             _queryBus = queryBus;
