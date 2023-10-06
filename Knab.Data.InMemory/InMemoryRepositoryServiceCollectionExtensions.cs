@@ -1,5 +1,4 @@
 using Knab.Core.Abstraction.Data;
-using Knab.Core.Infrastructure;
 using Knab.Domain.Entities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;

@@ -7,7 +7,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Knab.Core.Abstraction\Knab.Core.Abstraction.csproj" />
-      <ProjectReference Include="..\Knab.Core.Infrastructure\Knab.Core.Infrastructure.csproj" />
       <ProjectReference Include="..\Knab.Domain\Knab.Domain.csproj" />
     </ItemGroup>
 
