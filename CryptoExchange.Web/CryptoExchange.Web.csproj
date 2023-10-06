@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CryptoExchange.Application.CoinMarketCap\CryptoExchange.Application.CoinMarketCap.csproj" />
+      <ProjectReference Include="..\CryptoExchange.Application.ExchangeRatesApi\CryptoExchange.Application.ExchangeRatesApi.csproj" />
+      <ProjectReference Include="..\CryptoExchange.Application.TaskScheduler\CryptoExchange.Application.TaskScheduler.csproj" />
+      <ProjectReference Include="..\CryptoExchange.Core.Abstraction\CryptoExchange.Core.Abstraction.csproj" />
+      <ProjectReference Include="..\CryptoExchange.Data.InMemory\CryptoExchange.Data.InMemory.csproj" />
+      <ProjectReference Include="..\CryptoExchange.Integration\CryptoExchange.Integration.csproj" />
+    </ItemGroup>
+
+</Project>

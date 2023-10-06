@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CryptoExchange.Core.Abstraction\CryptoExchange.Core.Abstraction.csproj" />
+      <ProjectReference Include="..\CryptoExchange.Domain\CryptoExchange.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="7.0.0" />
+    </ItemGroup>
+
+</Project>

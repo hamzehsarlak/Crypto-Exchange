@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Hangfire.AspNetCore" Version="1.7.33" />
+      <PackageReference Include="Hangfire.Core" Version="1.7.33" />
+      <PackageReference Include="Hangfire.InMemory" Version="0.3.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CryptoExchange.Core.Abstraction\CryptoExchange.Core.Abstraction.csproj" />
+      <ProjectReference Include="..\CryptoExchange.Integration\CryptoExchange.Integration.csproj" />
+    </ItemGroup>
+
+</Project>

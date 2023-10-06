@@ -66,7 +66,7 @@ sequenceDiagram
 
 The app adheres to Clean Architecture.
 
-![diagram.png](assets%2Fdiagram.png)
+![diagram.png](assets%2Fdep-diagram.png)
 
 Explanation:
 
